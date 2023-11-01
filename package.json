@@ -1,0 +1,21 @@
+{
+  "name": "iblfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outdir=dist --minify --sourcemap --target=es2022 --platform=browser",
+    "test-decomp": "esbuild src/test.ts --bundle --platform=node --outdir=dist && node dist/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "esbuild": "0.19.5",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@obsidize/tar-browserify": "3.0.2"
+  }
+}
