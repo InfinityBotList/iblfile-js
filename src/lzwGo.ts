@@ -78,7 +78,7 @@ export class LZWReader {
     overflow: number = 0 // uint
     last: number = 0 // uint
 
-    err: Error // Error in the stream, if any
+    err: Error | undefined // Error in the stream, if any
 
 	// Each code c in [lo, hi] expands to two or more bytes. For c != hi:
 	//   suffix[c] is the last of these bytes.

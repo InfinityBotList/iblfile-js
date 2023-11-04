@@ -1,4 +1,4 @@
-import { Tarball, AsyncUint8Array } from '@obsidize/tar-browserify';
+import { Tarball } from '@obsidize/tar-browserify';
 import { ByteWReader, IOErrors, LZWReader, Order } from './lzwGo';
 
 export class IblFile {
@@ -14,7 +14,7 @@ export class IblFile {
         
         while(true) {
             let tmpBuf = new ByteWReader(Uint8Array.from([]))
-            let [n, err] = lzwReader.Read(tmpBuf)
+            let [_, err] = lzwReader.Read(tmpBuf)
 
             //console.debug("Read", n, "bytes")
 
